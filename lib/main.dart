@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'model/knowledge_demo.dart';
 import 'page/cycle_page.dart';
+import 'page/mixin_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<KnowledgeDemo> lists = [KnowledgeDemo('生命周期', const CyclePage())];
+  List<KnowledgeDemo> lists = [
+    KnowledgeDemo('生命周期', const CyclePage()),
+    KnowledgeDemo('mixin extends implements', const MixinPage()),
+  ];
 
   @override
   Widget build(BuildContext context) {
